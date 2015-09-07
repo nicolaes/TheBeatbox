@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Beatbox</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- bower:css -->
+    <!-- endbower -->
+
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body ng-app="beatbox">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">The Beatbox</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div songs class="song-list"></div>
+            <div playlist class="main-playlist"></div>
+            <div play-widget class="play-widget"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer>
+            The Beatbox - by Nicolae Stihhi
+        </footer>
+    </div>
+
+    <!-- bower:js -->
+    <!-- endbower -->
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>

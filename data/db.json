@@ -1,0 +1,105 @@
+{
+  "songs": [
+    {
+      "track_title": "Creature Comforts",
+      "artist_name": "Alan Singley",
+      "track_duration": "05:09",
+      "track_bit_rate": "320000",
+      "track_url": "http://freemusicarchive.org/music/listen/99fcdfab7aed5b4368d943be77365ee3e1ccb1b9",
+      "genre": "Symphony",
+      "id": "e7fed06b88c3be3f5ed3f28b25dd12ed10c26c3f"
+    },
+    {
+      "track_title": "Cylinder Four",
+      "artist_name": "Chris Zabriskie",
+      "track_duration": "02:56",
+      "track_bit_rate": "320000",
+      "track_url": "http://freemusicarchive.org/music/listen/9978b98c11b099091b84925d4bec6c6e2245a55d",
+      "genre": "Instrumental",
+      "id": "b770877896fddabdce2bbdad4cfba4699566573b"
+    },
+    {
+      "track_title": "Train",
+      "artist_name": "Dexter Britain",
+      "track_duration": "02:27",
+      "track_bit_rate": "256000",
+      "track_url": "http://freemusicarchive.org/music/listen/fd4e7fcc7c002fa4c4f166da474deb7e7b14f0a6",
+      "genre": "Soundtrack",
+      "id": "af8185e1417e66d39411d45d218e2c60a8b4da63"
+    },
+    {
+      "track_title": "Pink Fuzz!",
+      "artist_name": "The Protagonist!",
+      "track_duration": "05:23",
+      "track_bit_rate": "256000",
+      "track_url": "http://freemusicarchive.org/music/listen/29bfa08e7e29ce1671121d3f19f4b5e521d7214b",
+      "genre": "Lounge",
+      "id": "f246ac7632ff60505776c184445ad9ab3b39fd68"
+    },
+    {
+      "track_title": "Sunset",
+      "artist_name": "Evgeny Grinko",
+      "track_duration": "01:38",
+      "track_bit_rate": "256924",
+      "track_url": "http://freemusicarchive.org/music/listen/90dc9d2ee5b22aee2df2699d714a9508cdcc8860",
+      "genre": "Composed Music",
+      "id": "f270e38f2ee9c912ec08ad65a4c5cffd042d65aa"
+    },
+    {
+      "track_title": "Cylinder One",
+      "artist_name": "Chris Zabriskie",
+      "track_duration": "02:56",
+      "track_bit_rate": "320000",
+      "track_url": "http://freemusicarchive.org/music/listen/8d624b07c29165d4737c84b4afe1d1ae4b635649",
+      "genre": "Instrumental",
+      "id": "7cf2ea4bde507aa24690b5413aa02bbf112c921b"
+    },
+    {
+      "track_title": "Calling (Instrumental)",
+      "artist_name": "Dexter Britain",
+      "track_duration": "02:57",
+      "track_bit_rate": "320000",
+      "track_url": "http://freemusicarchive.org/music/listen/4ec4839674a99abc76331031c4226bc6042056ea",
+      "genre": "Soundtrack",
+      "id": "85bce6084bc1f39d2767037840830411426abd31"
+    },
+    {
+      "track_title": "Impact Prelude",
+      "artist_name": "Kevin MacLeod",
+      "track_duration": "03:22",
+      "track_bit_rate": "320000",
+      "track_url": "http://freemusicarchive.org/music/listen/a3652bafb8cc58ed997901e60460e66e40be4d1c",
+      "genre": "Unclassifiable",
+      "id": "02b3e55cbdfe262040e0dad044409df7479db7d6"
+    },
+    {
+      "track_title": "Sad Cyclops",
+      "artist_name": "Podington Bear",
+      "track_duration": "02:52",
+      "track_bit_rate": "320000",
+      "track_url": "http://freemusicarchive.org/music/listen/480435655a1105f3435f5aeaa9037c4ba6ca73a2",
+      "genre": "Soundtrack",
+      "id": "5d153d979141d865170930aae2ddf8fa34b53460"
+    },
+    {
+      "track_title": "Strange Wedding 60908",
+      "artist_name": "Marcel",
+      "track_duration": "04:10",
+      "track_bit_rate": "256000",
+      "track_url": "http://freemusicarchive.org/music/listen/2628d5889ffb614c9dafa13d3ebf01016d71beea",
+      "genre": "Lounge",
+      "id": "9c8a8edd3b6909b099da630a15a9cac49dddc5d6"
+    }
+  ],
+  "playlist-songs": [
+    {
+      "id": "af8185e1417e66d39411d45d218e2c60a8b4da63"
+    },
+    {
+      "id": "9c8a8edd3b6909b099da630a15a9cac49dddc5d6"
+    },
+    {
+      "id": "f270e38f2ee9c912ec08ad65a4c5cffd042d65aa"
+    }
+  ]
+}

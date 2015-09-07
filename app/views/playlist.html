@@ -1,0 +1,23 @@
+<h2>Your playlist</h2>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Song ID</th>
+        <th>Artist</th>
+        <th>Duration</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="song in playlistCtrl.songs">
+        <td ng-bind="song.track_title"></td>
+        <td ng-bind="song.artist_name"></td>
+        <td ng-bind="song.track_duration"></td>
+        <td>
+            <button class="btn btn-default" ng-click="playWidgetCtrl.playSong(song)">Play</button>
+            <button class="btn btn-default" ng-click="playlistCtrl.deleteSongById(song.id)">Delete</button>
+        </td>
+    </tr>
+    </tbody>
+</table>

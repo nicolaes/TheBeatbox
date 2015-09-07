@@ -1,0 +1,22 @@
+<h1>Songs</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Song title</th>
+            <th>Artist</th>
+            <th>Duration</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="song in songsCtrl.songs">
+            <td ng-bind="song.track_title"></td>
+            <td ng-bind="song.artist_name"></td>
+            <td ng-bind="songsCtrl.getDurationAndBitRate(song)"></td>
+            <td>
+                <button class="btn btn-default" ng-click="songsCtrl.addToPlaylist(song.id)">Add to playlist</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

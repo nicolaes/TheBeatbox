@@ -1,0 +1,14 @@
+$icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+.play-widget {
+  .glyphicon {
+    padding: 0.5em 0.5em;
+    font-size: 300%;
+  }
+
+  .progress-bar {
+    transition-timing-function: linear;
+  }
+}

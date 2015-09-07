@@ -1,0 +1,28 @@
+<h2>
+    Currently playing:
+    <em ng-bind="playWidgetCtrl.getCurrentSongName()"></em>
+</h2>
+<div class="row">
+    <button ng-click="">
+        <span class="glyphicon glyphicon-backward"></span>
+    </button>
+    <button ng-click="playWidgetCtrl.startPlaying()" ng-show="!playWidgetCtrl.songPlaying">
+        <span class="glyphicon glyphicon-play"></span>
+    </button>
+    <button ng-click="playWidgetCtrl.pausePlaying()" ng-show="playWidgetCtrl.songPlaying">
+        <span class="glyphicon glyphicon-pause"></span>
+    </button>
+    <button ng-click="playWidgetCtrl.stopPlaying()">
+        <span class="glyphicon glyphicon-stop"></span>
+    </button>
+    <button ng-click="">
+        <span class="glyphicon glyphicon-forward"></span>
+    </button>
+</div>
+<div class="row">
+    <span class="col-md-4">Time: {{playWidgetCtrl.elapsedTime}}</span>
+    <span class="col-md-4 col-md-offset-4 text-right">Remaining: {{playWidgetCtrl.remainingTime}}</span>
+</div>
+<div class="row progress">
+    <div id="play-widget-progress-bar" class="progress-bar" ng-style="playWidgetCtrl.getProgressBarStyle()"></div>
+</div>

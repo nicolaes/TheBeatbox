@@ -1,0 +1,28 @@
+{
+  "name": "TheBeatbox",
+  "version": "0.0.0",
+  "authors": [
+    "Nicolae Stihhi <nicolae.stihhi@gmail.com>"
+  ],
+  "description": "Basic music player with persistent playlist",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-resource": "~1.4.5",
+    "bootstrap-sass": "~3.3.5",
+    "jquery": "~2.1.4"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.5"
+  }
+}
