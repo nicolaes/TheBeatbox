@@ -91,11 +91,18 @@ gulp.task('test:protractor', ['serve:e2e', 'webdriver-update'], function(done){
 
 gulp.task('test', ['test:unit', 'test:protractor']);
 
+gulp.task('dev-server', function(){
+  $.connect.server({
+    root: ['.tmp', 'app']
+  });
+});
+
 gulp.task('serve', [
   'scripts',
   'styles',
   'wiredep',
-  'json-server'
+  'json-server',
+  'dev-server'
 ], function(){
   gulp.watch('app/index.html', ['wiredep']);
   gulp.watch('bower.json', ['wiredep']);
@@ -103,19 +110,13 @@ gulp.task('serve', [
   gulp.watch(['app/**/*.js', '!app/**/*.spec.js'], ['scripts']);
   gulp.watch('app/**/*.scss', ['styles']);
 
-  $.connect.server({
-    root: ['.tmp', 'app'],
-    livereload: true
-  });
+  return require('opn')('http://localhost:8080');
 });
 
 gulp.task('serve:e2e', [
   'scripts',
   'styles',
   'wiredep',
-  'json-server'
-], function(){
-  $.connect.server({
-    root: ['.tmp', 'app']
-  });
-});
+  'json-server',
+  'dev-server'
+]);

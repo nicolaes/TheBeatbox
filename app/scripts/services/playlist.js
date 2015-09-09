@@ -39,6 +39,14 @@ class PlaylistService {
     return -1;
   }
 
+  getFirstSong() {
+    if (this.playlistSongs.length === 0) {
+      return null;
+    }
+
+    return this.playlistSongs[0];
+  }
+
   getNextByCurrentSongId(songId) {
     let currentIndex = this.getPlaylistIndexBySongId(songId);
     if (currentIndex === -1) {

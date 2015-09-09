@@ -14,8 +14,11 @@ class PlayWidgetController {
   }
 
   play() {
-    if (this.currentSong === null)
-      return;
+    if (this.currentSong === null) {
+      // Play the first song (if available)
+      let firstSong = this.playlistService.getFirstSong();
+      return this.playSong(firstSong);
+    }
 
     this.songPlaying = true;
 
@@ -78,6 +81,10 @@ class PlayWidgetController {
   }
 
   playSong(song) {
+    if (song === null) {
+      return;
+    }
+
     this.stop();
 
     this.currentSong = song;
