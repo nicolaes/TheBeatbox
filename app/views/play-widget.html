@@ -3,19 +3,19 @@
     <em ng-bind="playWidgetCtrl.getCurrentSongName()"></em>
 </h2>
 <div class="row">
-    <button ng-click="">
+    <button ng-click="playWidgetCtrl.prev()">
         <span class="glyphicon glyphicon-backward"></span>
     </button>
-    <button ng-click="playWidgetCtrl.startPlaying()" ng-show="!playWidgetCtrl.songPlaying">
+    <button ng-click="playWidgetCtrl.play()" ng-show="!playWidgetCtrl.songPlaying">
         <span class="glyphicon glyphicon-play"></span>
     </button>
-    <button ng-click="playWidgetCtrl.pausePlaying()" ng-show="playWidgetCtrl.songPlaying">
+    <button ng-click="playWidgetCtrl.pause()" ng-show="playWidgetCtrl.songPlaying">
         <span class="glyphicon glyphicon-pause"></span>
     </button>
-    <button ng-click="playWidgetCtrl.stopPlaying()">
+    <button ng-click="playWidgetCtrl.stop()">
         <span class="glyphicon glyphicon-stop"></span>
     </button>
-    <button ng-click="">
+    <button ng-click="playWidgetCtrl.next()">
         <span class="glyphicon glyphicon-forward"></span>
     </button>
 </div>

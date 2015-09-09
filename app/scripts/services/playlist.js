@@ -39,6 +39,36 @@ class PlaylistService {
     return -1;
   }
 
+  getNextByCurrentSongId(songId) {
+    let currentIndex = this.getPlaylistIndexBySongId(songId);
+    if (currentIndex === -1) {
+      this.$log.info('Song is not in the playlist');
+      return null;
+    }
+
+    if (currentIndex === (this.playlistSongs.length - 1)) {
+      this.$log.info('Next song not available');
+      return null;
+    }
+
+    return this.playlistSongs[currentIndex + 1];
+  }
+
+  getPreviousByCurrentSongId(songId) {
+    let currentIndex = this.getPlaylistIndexBySongId(songId);
+    if (currentIndex === -1) {
+      this.$log.info('Song is not in the playlist');
+      return null;
+    }
+
+    if (currentIndex === 0) {
+      this.$log.info('Previous song not available');
+      return null;
+    }
+
+    return this.playlistSongs[currentIndex - 1];
+  }
+
   addById(songId) {
     let deferred = this.$q.defer();
 

@@ -2,6 +2,37 @@ $icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
+.song-list {
+  input[type="search"] {
+    margin-bottom: 1em;
+  }
+
+  th.orderable {
+    cursor: pointer;
+  }
+
+  .change-rating {
+    text-decoration: none;
+    cursor: pointer;
+
+    &[disabled] {
+      cursor: default;
+      color: $gray;
+    }
+  }
+
+  .my-rating {
+    font-size: 125%;
+    font-weight: bold;
+    width: 3em;
+    text-align: center;
+
+    &[disabled] {
+      background-color: $brand-success;
+    }
+  }
+}
+
 .play-widget {
   .glyphicon {
     padding: 0.5em 0.5em;

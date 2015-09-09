@@ -1,0 +1,8 @@
+<a ng-click="songRatingCtrl.minus()" ng-disabled="songRatingCtrl.fixedRating" class="change-rating minus">
+    <span class="glyphicon glyphicon-minus"></span>
+</a>
+<button ng-bind="songRatingCtrl.rating" class="my-rating"
+        ng-click="songRatingCtrl.rate()" ng-disabled="songRatingCtrl.fixedRating"></button>
+<a ng-click="songRatingCtrl.plus()" ng-disabled="songRatingCtrl.fixedRating" class="change-rating plus">
+    <span class="glyphicon glyphicon-plus"></span>
+</a>

@@ -1,19 +1,35 @@
 <h1>Songs</h1>
+<input type="search" class="form-control" ng-model="songsCtrl.searchKey"
+       placeholder="Search by title, artist, genre...">
 
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>Song title</th>
-            <th>Artist</th>
-            <th>Duration</th>
-            <th>Actions</th>
+            <th class="orderable" ng-click="songsCtrl.orderBy = 'track_title'">
+                Song title
+                <span class="glyphicon glyphicon-sort-by-order" ng-show="songsCtrl.orderBy === 'track_title'"></span>
+            </th>
+            <th class="orderable" ng-click="songsCtrl.orderBy = 'artist_name'">
+                Artist
+                <span class="glyphicon glyphicon-sort-by-order" ng-show="songsCtrl.orderBy === 'artist_name'"></span>
+            </th>
+            <th class="orderable" ng-click="songsCtrl.orderBy = 'genre'">
+                Genre
+                <span class="glyphicon glyphicon-sort-by-order" ng-show="songsCtrl.orderBy === 'genre'"></span>
+            </th>
+            <th><em>Duration</em></th>
+            <th><em>Rate</em></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="song in songsCtrl.songs">
+        <tr ng-repeat="song in songsCtrl.songs | orderBy:songsCtrl.orderBy | filter:songsCtrl.searchFilter"
+                class="song-item">
             <td ng-bind="song.track_title"></td>
             <td ng-bind="song.artist_name"></td>
+            <td ng-bind="song.genre"></td>
             <td ng-bind="songsCtrl.getDurationAndBitRate(song)"></td>
+            <td song-rating song-id="song.id"></td>
             <td>
                 <button class="btn btn-default" ng-click="songsCtrl.addToPlaylist(song.id)">Add to playlist</button>
             </td>

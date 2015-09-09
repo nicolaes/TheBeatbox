@@ -40,12 +40,19 @@ gulp.task('wiredep', function(){
     .pipe(gulp.dest('.tmp'));
 });
 
-gulp.task('json-server', function(){
-  $.jsonSrv.start({
+var jsonSrvWrapper = null;
+function startJsonSrv() {
+  jsonSrvWrapper = $.jsonSrv.start({
     data: 'data/db.json',
     id: 'id'
   });
-});
+}
+function stopJsonSrv() {
+  if (jsonSrvWrapper !== null) {
+    jsonSrvWrapper.kill();
+  }
+}
+gulp.task('json-server', startJsonSrv);
 
 gulp.task('clean:scripts', function(){
   return gulp.src('.tmp/scripts', {read: false})
@@ -57,7 +64,7 @@ gulp.task('clean:styles', function(){
     .pipe($.clean());
 });
 
-gulp.task('test', ['scripts'], function(done) {
+gulp.task('test:unit', ['scripts'], function(done) {
   new KarmaServer({
     configFile: path.join(__dirname, '/karma.conf.js'),
     singleRun: true,
@@ -66,7 +73,7 @@ gulp.task('test', ['scripts'], function(done) {
 });
 
 gulp.task('webdriver-update', $.protractor.webdriver_update);
-gulp.task('protractor', ['serve:e2e', 'webdriver-update'], function(done){
+gulp.task('test:protractor', ['serve:e2e', 'webdriver-update'], function(done){
   gulp.src('e2e/*.js')
     .pipe($.protractor.protractor({
       configFile: 'protractor.conf.js'
@@ -75,11 +82,14 @@ gulp.task('protractor', ['serve:e2e', 'webdriver-update'], function(done){
       throw err;
     })
     .on('end', function () {
-      // Close server
+      // Close servers
       $.connect.serverClose();
+      stopJsonSrv();
       done();
     });
 });
+
+gulp.task('test', ['test:unit', 'test:protractor']);
 
 gulp.task('serve', [
   'scripts',
