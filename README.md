@@ -2,6 +2,27 @@
 
 Demo music player with persistent playlist.
 
+## Installation
+
+### Requirements
+
+- Chrome browser
+- Node.JS with NPM
+- Compass (http://compass-style.org/install/)
+- Java (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
+### Dependencies
+
+```
+npm install
+bower install
+```
+
+### Run with `gulp serve`
+
+### Test with `gulp test`
+
+
 ## Technical description
 
 The app includes three primary directives and a component directive:
@@ -30,23 +51,6 @@ The server architecture is standard:
 - `karma` for running the tests
   - `phantomjs` to run unit tests
   - `karma-chrome-launcher` to run E2E tests
-
-
-## Installation
-
-### Requirements
-
-- Chrome browser
-- Node.JS with NPM
-- Compass (http://compass-style.org/install/)
-- Java (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-
-### Dependencies
-
-```
-npm install
-bower install
-```
 
 
 
